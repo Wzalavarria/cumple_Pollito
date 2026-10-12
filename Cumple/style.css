@@ -1,0 +1,1114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff5f7;
+    color: #4a2932;
+    overflow-x: hidden;
+}
+
+
+/* =================================
+   INICIO
+================================= */
+
+.inicio {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(circle at top, #ffe1e8, transparent 50%),
+        linear-gradient(135deg, #fff5f7, #ffe8ee);
+}
+
+.flor {
+    font-size: 65px;
+    margin-bottom: 20px;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.pequeno {
+    font-size: 18px;
+    color: #9b6572;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(38px, 7vw, 72px);
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    color: #7b3045;
+}
+
+.subtitulo {
+    font-size: 20px;
+
+    max-width: 600px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+
+    color: #79515c;
+}
+
+
+/* =================================
+   BOTÓN
+================================= */
+
+button {
+    border: none;
+
+    background: #a9405d;
+    color: white;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(169, 64, 93, 0.25);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+
+    background: #8e304a;
+
+    box-shadow:
+        0 15px 30px rgba(169, 64, 93, 0.35);
+}
+
+
+/* =================================
+   SECCIÓN SORPRESA
+================================= */
+
+.sorpresa {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 90px 25px;
+
+    background: #ffffff;
+}
+
+.etiqueta {
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    color: #b45a70;
+
+    margin-bottom: 25px;
+}
+
+.sorpresa h2 {
+    font-size: clamp(35px, 6vw, 60px);
+
+    color: #7b3045;
+
+    margin-bottom: 20px;
+}
+
+.separador {
+    font-size: 25px;
+
+    margin-bottom: 35px;
+}
+
+.mensaje {
+    max-width: 700px;
+
+    font-size: 20px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+    color: #654750;
+}
+
+
+/* =================================
+   GALERÍA JUNTOS
+================================= */
+
+.galeria-juntos {
+    width: min(100%, 900px);
+
+    margin-top: 40px;
+}
+
+.frase-fotos {
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: #79515c;
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-style: italic;
+}
+
+.fotos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.foto {
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(123, 48, 69, 0.15);
+
+    background: white;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.foto:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(123, 48, 69, 0.22);
+}
+
+.foto img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.foto:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =================================
+   SECCIÓN ELLA
+================================= */
+
+.seccion-ella {
+    width: min(100%, 1000px);
+
+    margin-top: 120px;
+
+    padding-top: 70px;
+
+    border-top: 1px solid #f2d9df;
+}
+
+.decoracion {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.seccion-ella h2 {
+    margin-bottom: 20px;
+}
+
+.frase-ella {
+    max-width: 650px;
+
+    margin: 0 auto 45px;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #79515c;
+}
+
+.galeria-ella {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+.foto-ella {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #fff5f7;
+
+    box-shadow:
+        0 10px 30px rgba(123, 48, 69, 0.14);
+
+    min-height: 280px;
+}
+
+.foto-ella.grande {
+    grid-row: span 2;
+
+    min-height: 580px;
+}
+
+.foto-ella img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 280px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.foto-ella:hover img {
+    transform: scale(1.05);
+}
+
+.frase-final-fotos {
+    margin-top: 45px;
+
+    font-size: 23px;
+
+    color: #7b3045;
+
+    font-style: italic;
+}
+
+
+/* =================================
+   CARTA
+================================= */
+
+.carta-seccion {
+    width: min(100%, 900px);
+
+    margin-top: 130px;
+
+    padding-top: 80px;
+
+    border-top: 1px solid #f2d9df;
+
+    perspective: 1200px;
+}
+
+
+/* =================================
+   SOBRE
+================================= */
+
+.sobre-contenedor {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
+
+    outline: none;
+
+    margin-top: 20px;
+}
+
+.sobre-contenedor:focus-visible {
+    outline: 3px solid rgba(169, 64, 93, 0.35);
+    outline-offset: 12px;
+    border-radius: 10px;
+}
+
+.sobre {
+    position: relative;
+
+    width: 360px;
+    height: 235px;
+
+    background: #f4cfd7;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 18px 45px rgba(123, 48, 69, 0.20);
+
+    overflow: visible;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.sobre-contenedor:hover .sobre {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 25px 55px rgba(123, 48, 69, 0.25);
+}
+
+
+/* Parte de atrás del sobre */
+
+.sobre-cuerpo {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6d8df,
+            #eebcc9
+        );
+
+    border-radius: 5px;
+
+    z-index: 1;
+}
+
+
+/* Bolsillo frontal del sobre */
+
+.sobre-cuerpo::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 125px solid #e7aeba;
+
+    z-index: 4;
+}
+
+.sobre-cuerpo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 125px solid rgba(255, 235, 240, 0.35);
+
+    z-index: 5;
+
+    transform: translateY(2px);
+}
+
+
+/* Solapa superior */
+
+.sobre-solapa {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-top: 125px solid #d995a6;
+
+    transform-origin: top center;
+
+    z-index: 7;
+
+    transition:
+        transform 0.9s cubic-bezier(.4, .0, .2, 1);
+
+    filter:
+        drop-shadow(
+            0 5px 4px rgba(123, 48, 69, 0.10)
+        );
+}
+
+
+/* Texto dentro del sobre */
+
+.sobre-texto {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 3;
+
+    color: #7b3045;
+
+    font-size: 21px;
+
+    white-space: nowrap;
+
+    font-weight: bold;
+
+    pointer-events: none;
+}
+
+
+/* Sello */
+
+.sello {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #a9405d;
+
+    border: 4px solid #f6d8df;
+
+    box-shadow:
+        0 6px 15px rgba(123, 48, 69, 0.25);
+
+    font-size: 23px;
+
+    z-index: 10;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.4s ease;
+}
+
+
+/* Cuando se abre */
+
+.sobre-contenedor.abierto .sobre {
+    transform: translateY(8px);
+}
+
+.sobre-contenedor.abierto .sobre-solapa {
+    transform: rotateX(180deg);
+}
+
+.sobre-contenedor.abierto .sello {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.4);
+}
+
+.sobre-contenedor.abierto .sobre-texto {
+    opacity: 0;
+}
+
+
+/* Texto debajo */
+
+.texto-abrir {
+    margin-top: 25px;
+
+    color: #9b6572;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    transition:
+        opacity 0.4s ease;
+}
+
+.sobre-contenedor.abierto + .texto-abrir {
+    opacity: 0.5;
+}
+
+
+/* =================================
+   CARTA REAL
+================================= */
+
+.carta {
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #fff8f1
+        );
+
+    border-radius: 8px;
+
+    padding: 65px 70px;
+
+    text-align: justify; /* Justificar el texto    pensar si dejarlo asi o aliniado a la izquierda left*/
+
+    box-shadow:
+        0 15px 45px rgba(123, 48, 69, 0.12);
+
+    border: 1px solid #f1e3d8;
+
+    position: relative;
+
+    margin-top: 35px;
+
+    /*
+       Cerrada inicialmente.
+       La carta se despliega después
+       de abrir el sobre.
+    */
+
+    opacity: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transform:
+        translateY(-45px)
+        scale(0.97);
+
+    transform-origin: top center;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.9s ease,
+        max-height 1.6s ease,
+        transform 1s cubic-bezier(.2, .8, .2, 1);
+
+    visibility: hidden;
+}
+
+
+/* Carta abierta */
+
+.carta.mostrar {
+    opacity: 1;
+
+    max-height: 9000px;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+
+    visibility: visible;
+
+    margin-top: 50px;
+}
+
+
+/* Decoración */
+
+.carta::before {
+    content: "❤️";
+
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    font-size: 25px;
+
+    opacity: 0.7;
+}
+
+.carta::after {
+    content: "🌷";
+
+    position: absolute;
+
+    bottom: 25px;
+    left: 30px;
+
+    font-size: 25px;
+
+    opacity: 0.7;
+}
+
+.carta h2 {
+    text-align: center;
+
+    font-size: clamp(28px, 5vw, 43px);
+
+    margin-bottom: 45px;
+
+    color: #7b3045;
+
+    line-height: 1.3;
+}
+
+.carta p {
+    font-size: 19px;
+
+    line-height: 2;
+
+    color: #5e4149;
+
+    margin-bottom: 30px;
+}
+
+.carta .despedida {
+    text-align: center;
+
+    font-size: 22px;
+
+    color: #7b3045;
+
+    margin-top: 40px;
+
+    margin-bottom: 15px;
+}
+
+.firma-carta {
+    text-align: center;
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    color: #6d3d4b;
+
+    margin-top: 45px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #ead7dc;
+}
+
+
+/* =================================
+   FINAL
+================================= */
+
+.final {
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 25px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffe0e8,
+            #fff5f7
+        );
+}
+
+.final h2 {
+    font-size: clamp(35px, 6vw, 60px);
+
+    color: #7b3045;
+
+    margin-bottom: 20px;
+}
+
+.final p {
+    max-width: 550px;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #79515c;
+}
+
+.corazon-grande {
+    font-size: 100px;
+
+    animation: latido 1.3s infinite;
+}
+
+.final-flores {
+    font-size: 30px;
+
+    margin-top: 35px;
+}
+
+
+/* =================================
+   CORAZONES
+================================= */
+
+.corazones {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+}
+
+.corazon {
+    position: absolute;
+
+    bottom: -30px;
+
+    font-size: 20px;
+
+    animation:
+        subir 6s linear forwards;
+
+    opacity: 0.7;
+}
+
+
+/* =================================
+   ANIMACIONES
+================================= */
+
+@keyframes flotar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes subir {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =================================
+   CELULAR
+================================= */
+
+@media (max-width: 600px) {
+
+    .inicio {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .subtitulo {
+        font-size: 17px;
+    }
+
+    .mensaje {
+        font-size: 18px;
+
+        line-height: 1.8;
+    }
+
+
+    /* Fotos juntos */
+
+    .fotos-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .foto img {
+        height: 210px;
+    }
+
+
+    /* Sección ella */
+
+    .seccion-ella {
+        margin-top: 90px;
+
+        padding-top: 55px;
+    }
+
+    .frase-ella {
+        font-size: 18px;
+
+        padding: 0 10px;
+    }
+
+    .galeria-ella {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .foto-ella {
+        min-height: 210px;
+
+        border-radius: 16px;
+    }
+
+    .foto-ella.grande {
+        grid-row: span 2;
+
+        min-height: 432px;
+    }
+
+    .foto-ella img {
+        min-height: 210px;
+    }
+
+    .foto-ella.grande img {
+        min-height: 432px;
+    }
+
+    .frase-final-fotos {
+        font-size: 20px;
+    }
+
+
+    /* =================================
+       SOBRE EN CELULAR
+    ================================== */
+
+    .carta-seccion {
+        margin-top: 90px;
+
+        padding-top: 55px;
+    }
+
+    .sobre {
+        width: 280px;
+
+        height: 185px;
+    }
+
+    .sobre-solapa {
+        border-left-width: 140px;
+        border-right-width: 140px;
+        border-top-width: 100px;
+    }
+
+    .sobre-cuerpo::before {
+        border-left-width: 140px;
+        border-right-width: 140px;
+        border-bottom-width: 100px;
+    }
+
+    .sobre-cuerpo::after {
+        border-left-width: 140px;
+        border-right-width: 140px;
+        border-bottom-width: 100px;
+    }
+
+    .sobre-texto {
+        font-size: 17px;
+    }
+
+    .sello {
+        width: 50px;
+        height: 50px;
+
+        font-size: 20px;
+    }
+
+    .texto-abrir {
+        font-size: 15px;
+    }
+
+
+    /* =================================
+       CARTA
+    ================================== */
+
+    .carta {
+        padding: 45px 25px;
+
+        border-radius: 6px;
+    }
+
+    .carta.mostrar {
+        margin-top: 40px;
+    }
+
+    .carta h2 {
+        font-size: 29px;
+
+        margin-bottom: 35px;
+    }
+
+    .carta p {
+        font-size: 17px;
+
+        line-height: 1.9;
+
+        margin-bottom: 27px;
+    }
+
+    .carta .despedida {
+        font-size: 20px;
+    }
+
+    .firma-carta {
+        font-size: 20px;
+    }
+
+
+    /* Final */
+
+    .corazon-grande {
+        font-size: 80px;
+    }
+
+}/* Detalles animados de cumpleaños */
+.cumple-animacion{display:flex;align-items:flex-end;justify-content:center;gap:28px;height:180px;margin-bottom:36px}
+.pollito-cumple{font-size:76px;animation:flotar 3s ease-in-out infinite;padding-bottom:12px}
+.pastel{position:relative;width:160px;height:168px;filter:drop-shadow(0 12px 12px #b66a7826)}
+.plato{position:absolute;bottom:0;left:-8px;width:176px;height:9px;border-radius:50%;background:#e7b7c5}
+.torta{position:absolute;left:50%;height:42px;border-radius:11px 11px 5px 5px;background:linear-gradient(#fff0c9 0 26%,#f0b878 27% 63%,#fff1d2 64% 78%,#e6a567 79%);border-top:7px solid #fff5dd;opacity:0;transform:translate(-50%,-95px) scale(.9)}
+.torta:after{content:'';position:absolute;inset:0 10px;background:radial-gradient(ellipse,#d87a95 0 2px,transparent 3px) 0 0/23px 11px;height:12px}
+.torta-uno{bottom:8px;width:152px;--espera:0s}.torta-dos{bottom:49px;width:122px;--espera:.75s}.torta-tres{bottom:90px;width:91px;--espera:1.5s}
+.velitas{position:absolute;bottom:132px;left:50%;display:flex;gap:17px;opacity:0;transform:translate(-50%,-70px);--espera:2.25s}
+.velitas i{position:relative;width:7px;height:22px;background:repeating-linear-gradient(135deg,#e48ba5 0 4px,#fff5e6 4px 8px);border-radius:2px}
+.velitas i:before{content:'';position:absolute;width:8px;height:13px;left:0;top:-15px;background:linear-gradient(#ffc04c,#ff8739);border-radius:80% 20% 65% 35%;box-shadow:0 0 13px #ffc561;animation:llama .7s alternate infinite}
+.en-vista .torta,.en-vista .velitas{animation:armar-pastel .7s var(--espera) cubic-bezier(.2,.8,.3,1.2) forwards}
+@keyframes armar-pastel{to{opacity:1;transform:translate(-50%,0) scale(1)}}
+@keyframes llama{to{transform:scale(.85) rotate(9deg)}}
+.rincon-mariposas{width:calc(100% + 50px);margin:65px -25px 30px;padding:55px 24px 65px;background:radial-gradient(ellipse at bottom right,#eee5ff,transparent 55%),linear-gradient(120deg,#fff8fb,#ffedf5);overflow:hidden}
+.mariposa-emblema{font-size:66px;margin-bottom:22px;animation:flotar 4s ease-in-out infinite}
+.rincon-mariposas .etiqueta{font-weight:bold}.frase-mariposas{font-size:clamp(18px,2.5vw,23px);color:#856170;line-height:1.7}
+.corazon-mariposas{position:relative;width:min(100%,600px);aspect-ratio:1.15;margin:55px auto 0}
+.mariposa{position:absolute;left:var(--x);top:var(--y);width:20px;height:20px;opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--giro))}
+.en-vista .mariposa{animation:formar-corazon 4s var(--espera) cubic-bezier(.25,.65,.3,1) forwards}
+.alas{display:block;font-size:18px;filter:drop-shadow(0 2px 2px #a14e7b33);animation:aletear .65s var(--espera) ease-in-out infinite alternate}
+@keyframes formar-corazon{15%{opacity:1}55%{transform:translate(calc(var(--dx) * -.15),calc(var(--dy) * .25)) rotate(-15deg);opacity:1}100%{opacity:1;transform:translate(-50%,-50%) rotate(0)}}
+@keyframes aletear{to{transform:scaleX(.45) translateY(-3px)}}
+.carta-seccion{background:#fff0f5;width:min(100%,1000px);padding:65px 30px 45px;border-top:0;border-radius:12px}
+.sobre-contenedor{margin:45px auto 0;width:min(100%,450px)}
+.sobre{width:100%;height:auto;aspect-ratio:450/294;background:#fbedd9;border-radius:3px}
+.sobre-cuerpo{background:linear-gradient(125deg,#fff7e9,#f5e1c9);overflow:hidden}
+.sobre-cuerpo:before,.sobre-cuerpo:after{inset:0;width:100%;height:100%;border:0;transform:none;background:linear-gradient(146deg,transparent 49.3%,#dec8b4 50%,transparent 50.8%);opacity:.55}
+.sobre-cuerpo:after{background:linear-gradient(34deg,transparent 49.3%,#dec8b4 50%,transparent 50.8%)}
+.sobre-solapa{width:100%;height:53%;border:0;clip-path:polygon(0 0,100% 0,50% 100%);background:#e7b6b9;filter:none}
+.sobre-texto{top:39%;z-index:8;font-size:clamp(20px,3.4vw,29px);color:#783d50}
+.sello{top:72%;width:70px;height:70px;background:#883650;border:5px solid #f8dadd;font-size:28px}
+.texto-abrir{font-size:clamp(17px,2.5vw,23px);font-style:normal;margin-top:34px}
+.carta{text-align:left;padding:0 54px;border-width:0;margin-top:0}
+.carta.mostrar{padding:65px 54px;max-height:none;border-width:1px}
+.carta p{line-height:1.95;font-size:clamp(17px,1.7vw,20px)}
+.regalo-seccion{min-height:80vh;display:grid;place-items:center;background:radial-gradient(ellipse,#fffafb,#fde5ee)}
+.regalo{position:relative;width:220px;height:310px;border-radius:0;background:none;padding:0;box-shadow:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:48px}
+.regalo:hover{background:none;box-shadow:none;transform:translateY(-5px)}
+.regalo:focus-visible{outline:3px solid #a9405d;outline-offset:15px;border-radius:16px}
+.lazo-flotante{font-size:60px;animation:flotar 3s ease-in-out infinite}
+.caja-regalo{position:relative;display:block;width:128px;height:128px;border-radius:5px 5px 13px 13px;background:linear-gradient(90deg,#e28c30,#ffd24a 23%,#ffe451 75%,#ffbf38);box-shadow:0 20px 28px #7b304529}
+.cinta-regalo{position:absolute;top:0;bottom:0;left:47px;width:34px;background:linear-gradient(90deg,#bc204c,#dc2d57,#b81f4c)}
+.tapa-regalo{position:absolute;z-index:2;top:0;left:-10px;width:148px;height:38px;background:linear-gradient(100deg,#eca53a,#ffdf47,#fff261);border-radius:7px;box-shadow:0 3px 4px #aa67264d;transition:transform .7s,opacity .7s}
+.tapa-regalo:after{content:'';position:absolute;left:57px;width:34px;height:100%;background:#ca2450}
+.tapa-regalo i,.tapa-regalo b{position:absolute;bottom:35px;width:55px;height:34px;background:linear-gradient(135deg,#f54757,#c6183f);border-radius:60% 60% 0 60%;left:17px;transform:rotate(14deg)}
+.tapa-regalo b{left:74px;transform:scaleX(-1) rotate(14deg)}
+.regalo.abierto .tapa-regalo{transform:translateY(-80px) rotate(-15deg);opacity:0}
+.final[hidden]{display:none}.final{background:radial-gradient(ellipse,#fffafb,#fde5ee);gap:18px;min-height:90vh}
+.final .corazon-grande{order:0;margin-bottom:18px}.final .felicitacion-final{order:1;font-size:clamp(36px,6vw,76px)}
+.final h2:not(.felicitacion-final){order:2;font-size:clamp(26px,3vw,34px);font-weight:normal}
+.final .final-flores{order:3;margin:0 0 15px}.final p{order:4;max-width:850px}
+@media(max-width:600px){.cumple-animacion{transform:scale(.85);margin-bottom:15px}.carta-seccion{padding:45px 16px 30px}.carta.mostrar{padding:50px 22px}.sello{width:57px;height:57px;font-size:23px}.corazon-mariposas{margin-top:35px}.alas{font-size:14px}.rincon-mariposas{padding-top:40px}.carta h2{font-size:27px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.corazon{display:none}}
